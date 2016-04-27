@@ -1,0 +1,2 @@
+This is the php file that is used to submit form data using the BSD api.
+It will return any errors or nothing for success.

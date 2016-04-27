@@ -1,0 +1,72 @@
+<head>
+<!-- jquery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+<!-- Bootstrap -->
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" integrity="sha384-aUGj/X2zp5rLCbBxumKTCw2Z50WgIr1vs/PFN4praOTvYXWlVyh2UtNUU0KAUhAX" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
+
+<style>
+#wrapper {
+	width:90%;
+	max-width:400px;
+	margin: 10px auto 10px auto;
+	padding: 10px;
+	border: 1px solid #000;
+	
+}
+</style>
+</head>
+
+<div id="wrapper">
+
+	<form id="testForm" role="form">
+		<div class="form-group">
+			<label for="FNAME">First name:</label>
+			<input id="FNAME" type="text" class="form-control" name="FNAME">
+			<label for="LNAME">Last name:</label>
+			<input id="LNAME" type="text" class="form-control" name="LNAME">
+			<label for="EMAIL">Email:</label>
+			<input id="EMAIL" type="email" class="form-control" name="EMAIL">	
+			<label for="ZIP">ZIP:</label>
+			<input id="ZIP" type="text" class="form-control" name="ZIP">
+			
+		</div><!-- .form-group -->
+	  <input type="submit" class="btn btn-default" value="Submit">
+	</form>
+
+	<hr>	
+	<h3>Results: </h3>	
+	<div class="results"></div>
+
+</div><!--#wrapper-->
+<script>
+
+//bind submit action from form to call SubmitData function
+$(document).ready(function(){	
+	$("#testForm").submit(function(event){
+		SubmitData();
+		event.preventDefault();
+	});	
+});
+
+//submit form data using jquery to get field values.  Use jquery ajax to show results.
+function SubmitData()
+{
+	$.ajax({
+		method: "POST",
+		url: "mailchimptest.php",
+		data: {FNAME: $("#FNAME").val(), LNAME: $("#LNAME").val(), ZIP: $("#ZIP").val(), EMAIL: $("#EMAIL").val()}
+	}).done(function(html){
+		$(".results").hide().html(html).fadeIn();
+	});
+}
+
+
+</script>

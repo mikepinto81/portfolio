@@ -1,0 +1,3 @@
+Used in video games created with the Unity Game Engine.  Pools objects for re-use to avoid frame rate hitches
+due to the creation of new objects or garbage collection of old objects.  A use case would be an infinate asteroid 
+field where asteroids behind you are recycled into asteroids ahead.

@@ -1,0 +1,48 @@
+.zotnipmp3player {width: 300px; background:black;}
+.zotnipmp3player li {list-style:none;}
+
+.zotnipmp3player ul {
+	margin:0;
+	padding:0;
+}
+
+.zotnipmp3player .playlist li{
+	border: 1px solid white;
+	padding:10px;
+	margin:10px 0;	
+	float: left;
+    width: 100%;
+}
+
+.zotnipmp3player .playlist li .plyrDragHandle {
+    cursor: move;
+    cursor: -webkit-grabbing;
+	background: #191919;
+    width: 25px;
+    height: 25px;
+    float: left;
+    text-align: center;
+    vertical-align: middle;
+    margin: 0 10px;
+}
+
+.zotnipmp3player .playlist li.sortable-chosen{
+	background-color:#191919;
+}
+
+.zotnipmp3player .hidePlaylistToggle {
+	cursor:pointer;
+}
+
+.zotnipmp3player .playlistTitle {
+    float: left;
+}
+
+.zotnipmp3player .nowPlayingIcon {
+	vertical-align:middle;
+	display:none;
+}
+
+.isPlaying .nowPlayingIcon {
+	display:inline-block;
+}

@@ -1,0 +1,8 @@
+live version: http://zotnip.com/test/mailchimptest/
+
+Uses bootstrap, jquery, and ajax to submit a mailchimp form.
+
+**will not work locally.
+
+**Please note the mailchimp.php was not written by me.  It is a wrapper that mailchimp links to
+which makes accessing the api much more straight forward.

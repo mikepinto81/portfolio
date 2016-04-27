@@ -1,0 +1,6 @@
+-An HTML5 audio player built for a wordpress music template.   
+-Send the constructer an element ID and a JSON object with the urls and names to MP3 files and it will
+create the HTML for the player within the element on the page.
+-Allows for drag and drop reordering of playlist
+-exposed functions to allow control of the mp3 player.
+-live demo at: http://www.zotnip.com/test/mustheme/

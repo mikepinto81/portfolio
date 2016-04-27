@@ -1,0 +1,6 @@
+-A wordpress plugin that registers a shortcode with attributes.
+-Takes data from csv files and turns them into html tables
+-The plugin then uses the datatables library to present tables as functional and responsive
+elements.
+
+see in use: http://www.development.signified.us/ufcwwest/scorecard/
