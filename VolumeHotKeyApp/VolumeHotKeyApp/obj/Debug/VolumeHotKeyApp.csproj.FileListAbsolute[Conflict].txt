@@ -1,0 +1,2 @@
+D:\GoogleDrive\Development\VolumeHotKeyApp\VolumeHotKeyApp\bin\Debug\VolumeHotKeyApp.exe.config
+C:\Users\Mike\Google Drive\Development\VolumeHotKeyApp\VolumeHotKeyApp\bin\Debug\VolumeHotKeyApp.exe.config
