@@ -6,7 +6,7 @@ public class GameMode_LandMode : GameMode_Base {
 
     public override void SetupAwake()
     {
-        ID = "LandMode";
+       //
     }
 
     public override IEnumerator EnterMode()
