@@ -6,7 +6,7 @@ public class GameMode_SpaceShipBridge : GameMode_Base {
 
     public override void SetupAwake()
     {
-        ID = "SpaceShipBridge";
+       //
     }
 
     public override IEnumerator EnterMode()
