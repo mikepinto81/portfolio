@@ -12,11 +12,6 @@ public abstract class GameMode_Base {
 
     public virtual void SetupStart() { }
 
-    /// <summary>
-    /// !!!!!set this in the SetupAwake method!!!!
-    /// </summary>
-    public string ID = "SETID";
-
     //will be run every update frame while this mode is active
     public virtual void ModeUpdate() { }
 
