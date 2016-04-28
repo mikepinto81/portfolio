@@ -32,17 +32,14 @@ public class SE_GameModeManager : MonoBehaviour {
     public bool changingMode { get { return _changingMode; } }
    
     //available GameMode objects
-    List<GameMode_Base> gameModes = new List<GameMode_Base>();
+    Dictionary<string, GameMode_Base> gameModes = new Dictionary<string, GameMode_Base>();
     
     GameMode_Base GetMode(string id)
     {
-        foreach(GameMode_Base mode in gameModes)
-        {
-            if (mode.ID == id)
-                return mode;
-        }
-
-        return null;
+	if(!gameModes.ContainsKey(id))
+            return null;
+        else
+            return gameModes[id];
     }
 
     /**
@@ -54,19 +51,19 @@ public class SE_GameModeManager : MonoBehaviour {
         _i = this;
 
         //add game modes to list
-        gameModes.Add(new GameMode_LandMode());
-        gameModes.Add(new GameMode_SpaceShipBridge());
-        gameModes.Add(new GameMode_MainMenu());
+        gameModes.Add("LandMode", new GameMode_LandMode());
+        gameModes.Add("SpaceShipBridge", new GameMode_SpaceShipBridge());
+        gameModes.Add("MainMenu", new GameMode_MainMenu());
         
         //Run each modes Awake method
-        foreach (GameMode_Base mode in gameModes)
+        foreach (GameMode_Base mode in gameModes.Values)
             mode.SetupAwake();
     }
 
     void Start()
     {
         //run each modes Start method
-        foreach (GameMode_Base mode in gameModes)
+        foreach (GameMode_Base mode in gameModes.Values)
             mode.SetupStart();
     }
 
