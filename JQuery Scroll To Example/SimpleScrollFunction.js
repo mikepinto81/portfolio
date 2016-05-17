@@ -1,7 +1,7 @@
 //last shown item ID
 var lastScrolledItemID = "";
 
-//Scroll to given element ID
+//Swaps contents of a the "InfoBarArea" and then scrolls to it.
 /*
 * id : HTML element ID
 * newbakcolor : color HEX value
