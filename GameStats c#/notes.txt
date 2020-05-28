@@ -1,3 +1,3 @@
-Stores game stats for any type of game. Stats can be stored as a float perameter or as a string meta data.
+Stores game stats for any type of game. Stats can be stored as a float perameter or as string meta data.
 You'll see a lot of [SerializeField] marks, these tell the Unity Engine to allow this data to be entered via the 
 editor interface.
